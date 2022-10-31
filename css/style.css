@@ -1,0 +1,96 @@
+.custom-btn {
+    padding: 6px 20px;
+    border: 2px solid #ffc107;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+.add-notes {
+    background: #ffc107;
+    color: #fff;
+    z-index: 1;
+}
+.add-notes:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    background: #e0e5ec;
+    transition: all 0.3s ease;
+}
+.add-notes:hover {
+    color: #000;
+}
+.add-notes:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+.add-notes:active {
+    top: 2px;
+}
+body {
+    background-color: #f1f3f4;
+}
+#notes_data {
+    display: flex;
+}
+.note-div {
+    display: block;
+    background-color: white;
+    box-shadow: 1px 1px 20px 0px #d0c1b6;
+    width: auto;
+    margin: auto;
+    padding: auto;
+    height: 150px;
+    overflow: auto;
+}
+textarea {
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+.edit-delete {
+    display: flex;
+    list-style-type: none;
+    margin: 4px;
+    padding: 0;
+}
+.edit-icon, .delete-icon {
+    position: relative;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 4px;
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 20px 0px #d0c1b6;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.edit-icon:hover {
+    background: #1DA1F2;
+    color: #ffffff;
+}
+.delete-icon:hover {
+    background: #459c33;
+    color: #ffffff;
+}
+.main {
+    margin-top: 45px;
+    padding: 10px;
+    word-break: break-all;
+}
